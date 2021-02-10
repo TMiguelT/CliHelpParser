@@ -1,8 +1,12 @@
 Changelog
 =========
+3.0.1 (2021-02-10)
+------------------
+* Pin spacy dependency above 3.x.x
+* Remove support for older spacy versions
 
 3.0.0 (2021-01-27)
-----------------
+------------------
 Breaking Changes
 ****************
 * Rework of executors
