@@ -2,6 +2,7 @@ import spacy
 import wordsegment
 
 
+@spacy.language.Language.component("prevent_sentence_boundary")
 def prevent_sentence_boundary_detection(doc):
     for token in doc:
         token.is_sent_start = False
@@ -12,7 +13,7 @@ try:
     nlp = spacy.load("en_core_web_sm")
     no_sentences = spacy.load("en_core_web_sm")
     no_sentences.add_pipe(
-        prevent_sentence_boundary_detection, name="prevent-sbd", before="parser"
+        "prevent_sentence_boundary", name="prevent-sbd", before="parser"
     )
 except IOError:
     raise Exception(
