@@ -6,7 +6,7 @@ setup(
     install_requires=[
         "pyparsing",
         "jinja2",
-        "spacy ~= 3.0",
+        "spacy~=3.0",
         "miniwdl",
         "wordsegment",
         "inflection",
@@ -21,7 +21,7 @@ setup(
         "psutil",
         "deprecated",
         "attrs",
-        "janis-pipelines.core >= 0.11.2",
+        "janis-pipelines.core>=0.11.2",
     ],
     python_requires=">=3.6",
     entry_points={"console_scripts": ["aclimatise = aclimatise.cli:main"]},
