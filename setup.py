@@ -6,7 +6,7 @@ setup(
     install_requires=[
         "pyparsing",
         "jinja2",
-        "spacy",
+        "spacy ~= 3.0",
         "miniwdl",
         "wordsegment",
         "inflection",
