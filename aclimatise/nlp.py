@@ -9,8 +9,8 @@ def prevent_sentence_boundary_detection(doc):
 
 
 try:
-    nlp = spacy.load("en")
-    no_sentences = spacy.load("en")
+    nlp = spacy.load("en_core_web_sm")
+    no_sentences = spacy.load("en_core_web_sm")
     no_sentences.add_pipe(
         prevent_sentence_boundary_detection, name="prevent-sbd", before="parser"
     )
