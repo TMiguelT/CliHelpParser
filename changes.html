@@ -34,7 +34,14 @@
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>3.0.0 (2021-01-27)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>3.0.1 (2021-02-10)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Pin spacy dependency above 3.x.x</p></li>
+<li><p>Remove support for older spacy versions</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>3.0.0 (2021-01-27)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="breaking-changes">
 <h3>Breaking Changes<a class="headerlink" href="#breaking-changes" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -66,15 +73,15 @@
 </ul>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>2.2.0 (2020-09-26)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>2.2.0 (2020-09-26)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">command.reanalyse()</span></code>, which re-analyses the help text stored in the command, using the current parser</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">command['sort']</span></code> which lets you access subcommands by name</p></li>
 </ul>
 </div>
-<div class="section" id="id6">
-<h2>2.1.0 (2020-09-22)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h2>2.1.0 (2020-09-22)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Add <cite>bedtools random</cite> as a test case</p></li>
 <li><p>Use a simple metric to exclude flags unless they have a somewhat valid description text, this should result in less false-positive flags being detected</p></li>
@@ -82,16 +89,16 @@
 <li><p>Use <cite>cwltool</cite> as a command-line tool instead of via the Python API (it is supposed to be more stable)</p></li>
 </ul>
 </div>
-<div class="section" id="id7">
-<h2>2.0.0 (2020-09-16)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h2>2.0.0 (2020-09-16)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Rename the package from <code class="docutils literal notranslate"><span class="pre">acclimatise</span></code> to <code class="docutils literal notranslate"><span class="pre">aclimatise</span></code>, to be consistent with the naming elsewhere. This is a breaking change, and will require you to <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aclimatise</span></code> from now on.</p></li>
 <li><p>Similarly, rename the module to <code class="docutils literal notranslate"><span class="pre">aclimatise</span></code>. This will require you to <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">aclimatise</span></code></p></li>
 <li><p>Rename the CLI utility from <code class="docutils literal notranslate"><span class="pre">acclimatise</span></code> to <code class="docutils literal notranslate"><span class="pre">aclimatise</span></code>.</p></li>
 </ul>
 </div>
-<div class="section" id="id8">
-<h2>1.2.0 (2020-09-13)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h2>1.2.0 (2020-09-13)<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="user-facing-changes">
 <h3>User-Facing Changes<a class="headerlink" href="#user-facing-changes" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -117,16 +124,16 @@
 </ul>
 </div>
 </div>
-<div class="section" id="id9">
-<h2>1.1.1 (2020-09-10)<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h2>1.1.1 (2020-09-10)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Fix the README file in PyPI</p></li>
 </ul>
 </div>
-<div class="section" id="id10">
-<h2>1.1.0 (2020-09-10)<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id11">
-<h3>User-Facing Changes<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<h2>1.1.0 (2020-09-10)<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>User-Facing Changes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>Better distinction between description blocks and flags, allowing us to successfully parse flags of this form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">use_strict</span> <span class="p">(</span><span class="n">enforce</span> <span class="n">strict</span> <span class="n">mode</span><span class="p">)</span>
@@ -154,8 +161,8 @@
 <li><p>Enforce that a <code class="docutils literal notranslate"><span class="pre">Positional</span></code> must have a description, in the parser</p></li>
 </ul>
 </div>
-<div class="section" id="id12">
-<h3>Internal Changes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id13">
+<h3>Internal Changes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Rewrite of both the flag and usage parser</p></li>
 <li><p>Added more customizable indent tokens, meaning we no longer need the <code class="docutils literal notranslate"><span class="pre">customIndentedBlock</span></code></p></li>
@@ -164,35 +171,35 @@
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">typeHLA.js</span></code> text, which is derived from the <code class="docutils literal notranslate"><span class="pre">bwa-kit</span></code> container.</p></li>
 </ul>
 </div>
-<div class="section" id="id13">
-<h3>Fixes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h3>Fixes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Always strip out newlines from the WDL description</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id14">
-<h2>1.0.3 (2020-08-26)<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h2>1.0.3 (2020-08-26)<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Add a hard timeout to the <code class="docutils literal notranslate"><span class="pre">DockerExecutor</span></code>, even if it’s producing output, e.g. the <code class="docutils literal notranslate"><span class="pre">yes</span></code> command.</p></li>
 </ul>
 </div>
-<div class="section" id="id15">
-<h2>1.0.2 (2020-08-25)<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id16">
+<h2>1.0.2 (2020-08-25)<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Ensure we never return <code class="docutils literal notranslate"><span class="pre">None</span></code> from the <code class="docutils literal notranslate"><span class="pre">DockerExecutor</span></code></p></li>
 <li><p>Add initial parsing of “output inputs”. Thanks to <a class="reference external" href="https://github.com/bernt-matthias">&#64;bernt-matthias</a> (<a class="reference external" href="https://github.com/aCLImatise/CliHelpParser/pull/15">#15</a>). However this information is not yet used in the converters.</p></li>
 </ul>
 </div>
-<div class="section" id="id17">
-<h2>1.0.1 (2020-08-22)<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h2>1.0.1 (2020-08-22)<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Enforce timeouts for all executors, including Docker</p></li>
 <li><p>Restructure the executors such that the parameters are all set in the constructor, not in the <code class="docutils literal notranslate"><span class="pre">execute()</span></code> call</p></li>
 </ul>
 </div>
-<div class="section" id="id18">
-<h2>1.0.0 (2020-08-19)<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id19">
+<h2>1.0.0 (2020-08-19)<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
 <p>Since the creation of executors is actually a breaking change, this is now a new major version</p>
 <div class="section" id="user-facing">
 <h3>User-Facing<a class="headerlink" href="#user-facing" title="Permalink to this headline">¶</a></h3>
@@ -212,8 +219,8 @@ executables in a Docker image</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id22">
-<h2>0.2.2 (2020-07-22)<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id23">
+<h2>0.2.2 (2020-07-22)<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Add support for Python 3.6 again</p></li>
 <li><p>Parse positionals by default from the CLI</p></li>
@@ -222,21 +229,21 @@ executables in a Docker image</p></li>
 <li><p>Add a <code class="docutils literal notranslate"><span class="pre">get_subclasses</span></code> method for WrapperGenerator</p></li>
 </ul>
 </div>
-<div class="section" id="id23">
-<h2>0.2.1 (2020-07-04)<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id24">
+<h2>0.2.1 (2020-07-04)<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Add automatic railroad diagram generation for grammar</p></li>
 <li><p>Add names to many of the parser elements to facilitate diagram generations</p></li>
 <li><p>Add genomethreader test</p></li>
 </ul>
 </div>
-<div class="section" id="id24">
-<h2>0.2.0 (2020-05-25)<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id25">
+<h2>0.2.0 (2020-05-25)<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="features">
 <h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">parameter_meta</span></code> (parameter documentation) generation back into WDL definitions</p></li>
-<li><p>Add <code class="xref py py-meth docutils literal notranslate"><span class="pre">acclimatise.model.Command.depth()</span></code>, and <a href="#id25"><span class="problematic" id="id26">:py:attribute:`acclimatise.model.Command.parent`</span></a> to <code class="xref py py-class docutils literal notranslate"><span class="pre">acclimatise.model.Command</span></code> to facilitate the traversal of the command tree</p></li>
+<li><p>Add <code class="xref py py-meth docutils literal notranslate"><span class="pre">acclimatise.model.Command.depth()</span></code>, and <a href="#id26"><span class="problematic" id="id27">:py:attribute:`acclimatise.model.Command.parent`</span></a> to <code class="xref py py-class docutils literal notranslate"><span class="pre">acclimatise.model.Command</span></code> to facilitate the traversal of the command tree</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">dinosaur</span></code> and <code class="docutils literal notranslate"><span class="pre">mauveAligner</span></code> as test cases in <code class="docutils literal notranslate"><span class="pre">test/test_data</span></code></p></li>
 <li><p>Convert tests into a series of test case objects that can be used to parameterize each test function</p></li>
 <li><p>Add the option to parallelize tests using pytest-parallel</p></li>
@@ -253,11 +260,11 @@ executables in a Docker image</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">aCLImatise</span></code> now only supports Python &gt;= 3.7.5, due to <a class="reference external" href="https://bugs.python.org/issue37424">this bug</a></p></li>
 </ul>
 </div>
-<div class="section" id="id27">
-<h3>Fixes<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id28">
+<h3>Fixes<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Avoid variable naming collisions using a generator-based iteration method in <code class="docutils literal notranslate"><span class="pre">acclimatise.name_generation.generate_names</span></code></p></li>
-<li><p>Keep a global <code class="docutils literal notranslate"><span class="pre">spacy</span></code> instance to minimize memory footprint. This is available in <a href="#id28"><span class="problematic" id="id29">:py:module:`acclimatise.nlp`</span></a></p></li>
+<li><p>Keep a global <code class="docutils literal notranslate"><span class="pre">spacy</span></code> instance to minimize memory footprint. This is available in <a href="#id29"><span class="problematic" id="id30">:py:module:`acclimatise.nlp`</span></a></p></li>
 <li><p>Fix infinite loops in explore, e.g. tools like <code class="docutils literal notranslate"><span class="pre">dinosaur</span></code> and <code class="docutils literal notranslate"><span class="pre">mauve</span></code> by adding more advanced subcommand detection in <code class="docutils literal notranslate"><span class="pre">acclimatise.is_subcommand</span></code></p></li>
 <li><p>Make cmd optional for validators</p></li>
 <li><p>Always run commands in a pseudo-TTY so that commands like <code class="docutils literal notranslate"><span class="pre">samtools</span></code> will output help</p></li>
@@ -265,21 +272,21 @@ executables in a Docker image</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="id30">
-<h2>0.1.5 (2020-05-18)<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id31">
+<h2>0.1.5 (2020-05-18)<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Bugfix for when we have no help text</p></li>
 <li><p>Add a test for a program that we know fails</p></li>
 </ul>
 </div>
-<div class="section" id="id31">
-<h2>0.1.4 (2020-05-18)<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id32">
+<h2>0.1.4 (2020-05-18)<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Choose best command using length of help text, if everything else is equal</p></li>
 </ul>
 </div>
-<div class="section" id="id32">
-<h2>0.1.3 (2020-05-15)<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id33">
+<h2>0.1.3 (2020-05-15)<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Command</span></code> types now contain a <code class="docutils literal notranslate"><span class="pre">help_text</span></code> field which records the string that was used to generate them. This should enable efficient re-parsing, and can also be displayed downstream by BaseCamp</p></li>
 <li><p>Rewrite tests into a parametrized, consolidated end-to-end test</p></li>
@@ -287,22 +294,22 @@ executables in a Docker image</p></li>
 <li><p>Remove positional arguments that precede the main command, so <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">Pisces.dll</span></code> will be removed from the entire command</p></li>
 </ul>
 </div>
-<div class="section" id="id33">
-<h2>0.1.2 (2020-05-15)<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id34">
+<h2>0.1.2 (2020-05-15)<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Generating YAML output now produces one file for each subcommand, to match other converters</p></li>
 </ul>
 </div>
-<div class="section" id="id34">
-<h2>0.1.1 (2020-05-13)<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id35">
+<h2>0.1.1 (2020-05-13)<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Make <code class="docutils literal notranslate"><span class="pre">explore</span> <span class="pre">-o</span></code> flag default to current working directory, for simplicity</p></li>
 <li><p>Updated the readme</p></li>
 <li><p>Add installation instructions</p></li>
 </ul>
 </div>
-<div class="section" id="id35">
-<h2>0.1.0 (2020-05-13)<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id36">
+<h2>0.1.0 (2020-05-13)<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Fix the doubled variable names like <code class="docutils literal notranslate"><span class="pre">bytesBytes</span></code></p></li>
 <li><p>Smarter POS-based algorithm for generating names from descriptions</p></li>
@@ -377,7 +384,7 @@ executables in a Docker image</p></li>
       &copy;2020, Michael Milton.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
